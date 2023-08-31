@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>REGISTATION FORM</title>
+ </head> 
+ <body>
+    <section>
+        <div class="intake" id="intake">
+            <h1 class="title" id="title">STUDENT ENROLMENT FORM</h1>
+            <form class="form">
+              <div class="inbox">
+                <div>
+                <input type="text" class="input" name="name" id="name" placeholder=" "><label for="name" class="placeholder">NAME</label></div>
+                <div>
+                <input type="email" class="input"  name="email" id="email" placeholder=" "><label for="email" class="placeholder">EMAIL</label></div>
+                <input type="file" class="image"  name="img" id="img">
+                </div>
+                
+                <div class="gender">
+                  <p>GENDER</p>
+                <input class="m" type="radio" name="gen" value="Male" id="m" checked><label for="m">Male</label>
+                <input class="f" type="radio" name="gen" value="Female" id="f"><label for="f">Female</label>
+                </div>
+
+                <div class="skills">
+                  <p>SKILLS</p>
+                <input type="checkbox" name="html"  value="html" id="html"><label for="html">HTML</label>
+                <input type="checkbox" name="css" value="css" id="css"><label for="css">CSS</label>
+                <input type="checkbox" name="js" value="js" id="js"><label for="js">JAVA SCRIPT</label>
+                </div>
+
+                <p class="note">
+                    please enter valid information...
+                </p>
+              
+              <div class="sub">
+              <input type="button" id="submit" value="submit" onclick="enroll()">
+              <input type="button" id="clear" value="clear" onclick="clear()" >
+              </div>
+             </form>
+
+        </div>
+        <div class="display" id="display">
+            
+                <h1 class="title">DISPLAY</h1>
+               
+
+        </div>
+     </section>
+     <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,207 @@
+:root{
+    --pink: #d36511;
+    --skyblue:#fafeffea;
+    --sec:#5c3b6f;
+    --pre:#8d8aae;
+
+}
+
+body{
+    margin: 0;
+    background-image: linear-gradient(1deg , var(--skyblue) 5%, var(--pink) 50%);
+    color: #256070;
+}
+section{
+    display:flex;
+    justify-content:space-evenly;
+    align-items: center;
+    min-height: 100vh;
+}
+.intake,.display{
+    min-width: 45vw;
+    height:80vh;
+    border: 2px solid rgb(221, 221, 221);
+    
+    overflow-y: scroll;
+    transition: .3s;
+}
+.intake:hover,
+.display:hover{
+    box-shadow:0px 5px 10px rgb(30, 30, 30),0px 10px 15px rgb(30, 30, 30) ;
+}
+.intake{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.title{
+    margin:5%;
+    text-transform:capitalize;
+    color: rgb(48, 88, 118);
+    padding-left: 5px;
+    border-left: 5px solid rgb(57, 59, 57);
+}
+.form{
+    width: 80%;
+    min-height: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+}
+.inbox{
+    display: flex;
+    flex-direction: column;
+    justify-content:left;
+    width: 80%;
+    margin:5% auto;
+}
+.placeholder{
+    position: relative;
+    bottom:50%;
+    left:7%;
+    border-radius:5px;
+    padding:1%;
+    transition: .5s;
+}
+.inbox input:focus ~ .placeholder,
+.input:not(:placeholder-shown) ~ .placeholder
+{
+    bottom:85%;
+    background-color: lightblue;
+}
+.inbox input:invalid~ .placeholder{
+    color: lightgray;
+}
+.inbox input{
+    width: 80%;
+    display: flex;
+    border-radius: 5px;
+    padding: 2%;
+    justify-content: space-evenly;
+    margin: 5%;
+}
+.image::-webkit-file-upload-button{
+    visibility: hidden;
+}
+.image::before{
+    content: 'select profile image';
+    width: 70%;
+    align-items: center;
+    justify-content:center;
+    padding: 5px;
+    background-color:whitesmoke;
+}
+.gender, .skills{
+    margin:5%;
+    margin-top:0%;
+    display: flex;
+    position: relative;
+    left: 10%;
+    justify-content:left;
+    align-items:center;
+}
+.gender p,.skills p{
+    margin-right: 10%;
+    min-width:20%;
+}
+.gender label, .skills label{
+    position: relative;
+    margin: 1%;
+    padding: 2%;
+    background-color: rgba(255, 255, 255, 0.135);
+}
+.gender label:hover ,.skills label:hover{
+    background-color: rgba(245, 245, 245, 0.372);
+}
+.gender input[type="radio"]{
+   display: none;
+    position: relative;
+   background-color: rgb(3, 95, 113);
+}
+.gender input[type="radio"]:checked + label{
+    background-color: whitesmoke;
+}
+.skills input{
+    display: none;
+}
+.skills input:checked+label{
+    background-color: whitesmoke;
+}
+.sub{
+    display: inline-flex;
+    justify-content: space-evenly;
+    min-width:70%;
+    margin: 5% auto;
+    padding-bottom: 10%;
+    margin-bottom: 5%;
+}
+.sub input{
+    padding:3%;
+    min-width:40%;
+    border-radius: 10px;
+    border: 1px solid black;
+    background-color:var(--pre);
+    opacity:.9;
+    transition:.2s;
+}
+.sub input:hover{
+    transform: scale(1.2);
+    opacity: 1.5;
+    box-shadow:0px 0px 10px var(--sec),0px 0px 20px var(--skyblue);
+}
+.note{
+    margin: 0 auto;
+    color: rgb(174, 126, 126);
+    opacity: 0;
+}
+.display{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.card{
+    width: 80%;
+    min-height:30%;
+    color: #704d9a;
+    background-color: var(--skyblue);
+    border: 2px solid rgb(213, 213, 213);
+    border-radius:25px;
+    box-shadow: 0px 5px 10px rgb(128, 111, 111);
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    margin-top:5%;
+    margin-bottom: 5%;
+}
+.details{
+    margin-left: 15%;  
+}
+.d_name{
+    font-size: 1.8rem;
+    margin: 5% auto;
+}
+.d_email,.d_gender,.d_skills{
+    display: flex;
+    font-size: 1.1rem;
+    margin: 2% auto;
+}
+.d_img{
+    background-color: #dad3d3;
+    background-image: url(profile.png);
+    background-position: center;
+    background-size: cover;
+    border-radius: 25px;
+    margin:2%;
+}
+::-webkit-scrollbar {
+    width: 10px;
+    height:3px;
+  }
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px rgb(194, 156, 156);
+    border-radius: 10px;
+}
+::-webkit-scrollbar-thumb {
+    background-image:linear-gradient(45deg,#88b6bc,#70a3b0);
+    border-radius: 10px;
+}
